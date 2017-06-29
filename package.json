@@ -1,0 +1,25 @@
+{
+  "name": "async_await",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --display-optimization-bailout",
+    "start-prod": "cross-env NODE_ENV=production webpack --config webpack.config.js --display-optimization-bailout && node ./dist/index.js",
+    "start": "node ./src/index.js",
+    "eslint": "eslint ./src/**/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "bluebird": "^3.5.0",
+    "cross-env": "^5.0.1",
+    "eslint": "^4.1.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "inquirer": "^3.1.1"
+  }
+}
