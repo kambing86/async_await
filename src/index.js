@@ -1,17 +1,29 @@
-// require("babel-polyfill");
-var inquirer = require("inquirer");
+const inquirer = require("inquirer");
+const allModules = [
+  {
+    name: "./01_basic",
+    value: require("./01_basic")
+  },
+  {
+    name: "./02_sequece",
+    value: require("./02_sequece")
+  },
+  {
+    name: "./03_parallel",
+    value: require("./03_parallel")
+  },
+  {
+    name: "./04_parallel_track",
+    value: require("./04_parallel_track")
+  }
+];
 inquirer.prompt([{
   name: "run",
   type: "list",
   message: "which file to run?",
-  choices: [
-    "./01_basic",
-    "./02_sequece",
-    "./03_parallel",
-    "./04_parallel_track"
-  ]
+  choices: allModules
 }]).then(answers => {
-  require(answers.run);
+  answers.run();
 }).catch(err => {
   console.error(err);
 });

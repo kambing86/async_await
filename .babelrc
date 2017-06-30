@@ -6,7 +6,7 @@
                 "target": {
                     "node": "current"
                 },
-                "useBuiltIns": true
+                "exclude": ["transform-regenerator"]
             }
         ]
     ],
